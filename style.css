@@ -1,6 +1,40 @@
+@media only screen and (max-width: 480px) {
+    /* For mobile phones */
+    body {
+        background-color: rgb(54, 8, 8);
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+    /* For tables */
+    body {
+        background-color: rgb(15, 44, 15);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /* For computers */
+    body {
+        background-color: rgb(22, 22, 51);
+    }
+}
+
 body {
-    background-color: black;
     color: blanchedalmond;
-    margin: auto;
-    padding: 5%;
+}
+
+div {
+    width: 90%;
+}
+
+div h1 {
+    font-size: 24px;
+    font-family: cursive;
+    text-align: center;
+}
+
+div p {
+    font-size: 16px;
+    font-family:cursive;
+    text-align: left;
 }
