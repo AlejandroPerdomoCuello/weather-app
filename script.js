@@ -37,7 +37,7 @@ const weather52 = "&units=metric&appid=50b9caeb9f022d5e06aded241bfda347";
 document.getElementById("mainBtn")
     .addEventListener("click", function getCityName() {
         let city = document.getElementById("cityName1").value;
-        document.getElementById("mainOutput").innerHTML = city;
+        // ocument.getElementById("mainOutput").innerHTML = city;
 
         // Here we construct the weblink with the proper name
         let urlNow = weatherNow1 + city + weatherNow2;
@@ -62,7 +62,9 @@ document.getElementById("mainBtn")
             .then((data) => {
                 // Work with JSON data here
                 console.log(data);
-                console.log(data.main.temp,)
+                console.log(data.main.temp,);
+                let numberNow = data.main.temp;
+                document.getElementById("mainOutput").innerHTML = numberNow;
             })
             .catch((err) => {
                 // Do something for an error here
