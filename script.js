@@ -51,14 +51,20 @@ document.getElementById("mainBtn")
         
         fetch(urlNow)
             .then((response) => {
-                console.log(response);
+                if (response.ok) {
+                    console.log("Success")
+                } else {
+                    console.log("Error")
+                }
+                
                 return response.json();
             })
-            .then(() => {
+            .then((data) => {
                 // Work with JSON data here
+                console.log(data);
+                console.log(data.main.temp,)
             })
             .catch((err) => {
-                console.log("Error");
                 // Do something for an error here
             });
         
