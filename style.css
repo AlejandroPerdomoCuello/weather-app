@@ -23,8 +23,18 @@ body {
     color: blanchedalmond;
 }
 
-div {
-    width: 90%;
+div #container {
+    
+}
+
+div #mainTemp {
+    width: 40%;
+    float: left;
+}
+
+div #secondTemp {
+    width: 40%;
+    float: left;
 }
 
 div h1 {

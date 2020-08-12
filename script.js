@@ -15,8 +15,8 @@ Information on getting the API to work
 
 */
 
-// weather for now with the API already included
-const weatherNow = "api.openweathermap.org/data/2.5/weather?q={city name}&units=metric&appid=50b9caeb9f022d5e06aded241bfda347";
+// weather for now with the API already included, make sure that the api starts with http://
+const weatherNow = "http://api.openweathermap.org/data/2.5/weather?q={city name}&units=metric&appid=50b9caeb9f022d5e06aded241bfda347";
 
 // Now to break the weblink to add the city name
 
@@ -63,7 +63,7 @@ document.getElementById("mainBtn")
                 // Work with JSON data here
                 console.log(data);
                 console.log(data.main.temp,);
-                let numberNow = data.main.temp;
+                let numberNow = data.main.temp + "C";
                 document.getElementById("mainOutput").innerHTML = numberNow;
             })
             .catch((err) => {
