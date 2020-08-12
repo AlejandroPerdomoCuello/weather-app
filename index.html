@@ -1,29 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div id="container">
 
-    <h1>Weather App</h1>
-<p>Please provide the city that you want to know the weather, because Google is down or something.....</p>
+        <h1>Weather App</h1>
 
-  <label for="cityName1">City Name:</label><br>
-  <input type="text" id="cityName1" name="cityName1"><br>
-  <!--
-  <label for="cityName2">City Name To Compare:</label><br>
-  <input type="text" id="cityName2" name="cityName2"><br><br>
-  -->
-  <button id="btn">Submit</button>
+        <div id="mainTemp">
 
-  <div>
-    <p id="output"></p>
-  </div>
+            <p>Please provide the city that you want to know the weather, because Google is down or something.....</p>
 
+            <label for="cityName1">City Name:</label><br>
+            <input type="text" id="cityName1" name="cityName1"><br>
+           
+            <button id="mainBtn">Submit</button>
+
+            <div>
+                <p id="mainOutput"></p>
+            </div>
+
+        </div>
+
+        <div id="secondTemp">
+
+            <p>If you want to compare two cities, here is your chance</p>
+
+            <label for="cityName2">City Name To Compare:</label><br>
+            <input type="text" id="cityName2" name="cityName2"><br><br>
+
+            <button id="btn">Submit</button>
+
+            <div>
+                <p id="secondOutput"></p>
+            </div>
+            
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
