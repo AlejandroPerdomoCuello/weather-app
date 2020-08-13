@@ -1,99 +1,85 @@
 @media only screen and (max-width: 480px) {
 
     /* For mobile phones */
-    body {
-        background-color: rgb(54, 8, 8);
-    }
-
-
-    h1 {
-        grid-area: "header";
-    }
 
     #mainTemp {
         width: 90%;
-        grid-area: "main";
         float: left;
+        clear: left;
 
     }
 
     #secondTemp {
         width: 90%;
-        grid-area: "second";
         float: left;
+        clear: left;
     }
 
-    footer {
-        grid-area: "footer";
-    }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
 
     /* For tables */
-    body {
-        background-color: rgb(15, 44, 15);
-    }
-
-
-
-    h1 {
-        grid-area: "header";
-    }
 
     #mainTemp {
         width: 90%;
-        grid-area: "main";
         float: left;
+        clear: left;
     }
 
     #secondTemp {
         width: 90%;
-        grid-area: "second";
         float: left;
+        clear: left;
     }
 
-    #footer {
-        grid-area: "footer";
-    }
 }
 
 @media only screen and (min-width: 1024px) {
 
     /* For computers */
-    body {
-        background-color: rgb(22, 22, 51);
-        color: blanchedalmond;
-    }
-
-
-
-    h1 {
-        font-size: 24px;
-        font-family: cursive;
-        text-align: center;
-        grid-area: "header";
-    }
-
+    
     #mainTemp {
-        width: 40%;
-        grid-area: "main";
+        width: 50%;
         float: left;
     }
 
     #secondTemp {
-        width: 40%;
-        grid-area: "second";
+        width: 50%;
         float: left;
     }
 
-    #footer {
-        grid-area: "footer";
-    }
+}
 
-    p {
-        font-size: 16px;
-        font-family: cursive;
-        text-align: left;
-    }
+body {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    font-size: 46px;
+    font-family: cursive;
+    text-align: center;
+}
+
+#mainTemp {
+    width: 50%;
+    grid-area: "main";
+    float: left;
+}
+
+#secondTemp {
+    width: 50%;
+    grid-area: "second";
+    float: left;
+}
+
+#footer {
+    grid-area: "footer";
+}
+
+p, label, button, input {
+    font-size: 24px;
+    font-family: cursive;
+    text-align: left;
 }

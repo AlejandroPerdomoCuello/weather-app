@@ -63,7 +63,7 @@ document.getElementById("mainBtn")
                 // Work with JSON data here
                 console.log(data);
                 console.log(data.main.temp,);
-                let numberNow = data.main.temp + "C";
+                let numberNow = data.main.temp + "°C";
                 document.getElementById("mainOutput").innerHTML = numberNow;
             })
             .catch((err) => {
