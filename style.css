@@ -1,80 +1,77 @@
 @media only screen and (max-width: 480px) {
+
     /* For mobile phones */
     body {
         background-color: rgb(54, 8, 8);
     }
 
-    div #container {
+    #container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr
-                            1fr
-                            1fr
-                            1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas: "header"
-                            "mainTemp"
-                            "secondTemp"
-                            "footer";
+            "mainTemp"
+            "secondTemp"
+            "footer";
     }
 
-    div h1 {
+    h1 {
         grid-area: "header";
     }
 
-    div #mainTemp {
+    #mainTemp {
         width: 90%;
         grid-area: "mainTemp";
     }
-    
-    div #secondTemp {
+
+    #secondTemp {
         width: 90%;
         grid-area: "secondTemp";
     }
 
-    div #footer {
+    footer {
         grid-area: "footer";
     }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
+
     /* For tables */
     body {
         background-color: rgb(15, 44, 15);
     }
 
-    div #container {
+    #container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr
-                            1fr
-                            1fr
-                            1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas: "header"
-                            "mainTemp"
-                            "secondTemp"
-                            "footer";
+            "mainTemp"
+            "secondTemp"
+            "footer";
     }
 
-    div h1 {
+    h1 {
         grid-area: "header";
     }
 
-    div #mainTemp {
+    #mainTemp {
         width: 90%;
         grid-area: "mainTemp";
     }
-    
-    div #secondTemp {
+
+    #secondTemp {
         width: 90%;
         grid-area: "secondTemp";
     }
 
-    div #footer {
+    #footer {
         grid-area: "footer";
     }
 }
 
 @media only screen and (min-width: 1024px) {
+
     /* For computers */
     body {
         background-color: rgb(22, 22, 51);
@@ -85,40 +82,36 @@ body {
     color: blanchedalmond;
 }
 
-div #container {
+#container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr
-                        1fr
-                        1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "header header"
-                        "mainTemp secondTemp"
-                        "footer";
+        "main second"
+        "footer";
 }
 
-div h1 {
+h1 {
     font-size: 24px;
     font-family: cursive;
     text-align: center;
     grid-area: "header";
 }
 
-div #mainTemp {
-    width: 40%;
-    grid-area: "mainTemp";
+#mainTemp {
+    grid-area: "main";
 }
 
-div #secondTemp {
-    width: 40%;
-    grid-area: "secondTemp";
+#secondTemp {
+    grid-area: "second";
 }
 
-div #footer {
+#footer {
     grid-area: "footer";
 }
 
-div p {
+p {
     font-size: 16px;
-    font-family:cursive;
+    font-family: cursive;
     text-align: left;
 }
