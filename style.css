@@ -5,15 +5,6 @@
         background-color: rgb(54, 8, 8);
     }
 
-    #container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: "header"
-            "mainTemp"
-            "secondTemp"
-            "footer";
-    }
 
     h1 {
         grid-area: "header";
@@ -21,12 +12,15 @@
 
     #mainTemp {
         width: 90%;
-        grid-area: "mainTemp";
+        grid-area: "main";
+        float: left;
+
     }
 
     #secondTemp {
         width: 90%;
-        grid-area: "secondTemp";
+        grid-area: "second";
+        float: left;
     }
 
     footer {
@@ -41,15 +35,7 @@
         background-color: rgb(15, 44, 15);
     }
 
-    #container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: "header"
-            "mainTemp"
-            "secondTemp"
-            "footer";
-    }
+
 
     h1 {
         grid-area: "header";
@@ -57,12 +43,14 @@
 
     #mainTemp {
         width: 90%;
-        grid-area: "mainTemp";
+        grid-area: "main";
+        float: left;
     }
 
     #secondTemp {
         width: 90%;
-        grid-area: "secondTemp";
+        grid-area: "second";
+        float: left;
     }
 
     #footer {
@@ -75,43 +63,37 @@
     /* For computers */
     body {
         background-color: rgb(22, 22, 51);
+        color: blanchedalmond;
     }
-}
 
-body {
-    color: blanchedalmond;
-}
 
-#container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "header header"
-        "main second"
-        "footer";
-}
 
-h1 {
-    font-size: 24px;
-    font-family: cursive;
-    text-align: center;
-    grid-area: "header";
-}
+    h1 {
+        font-size: 24px;
+        font-family: cursive;
+        text-align: center;
+        grid-area: "header";
+    }
 
-#mainTemp {
-    grid-area: "main";
-}
+    #mainTemp {
+        width: 40%;
+        grid-area: "main";
+        float: left;
+    }
 
-#secondTemp {
-    grid-area: "second";
-}
+    #secondTemp {
+        width: 40%;
+        grid-area: "second";
+        float: left;
+    }
 
-#footer {
-    grid-area: "footer";
-}
+    #footer {
+        grid-area: "footer";
+    }
 
-p {
-    font-size: 16px;
-    font-family: cursive;
-    text-align: left;
+    p {
+        font-size: 16px;
+        font-family: cursive;
+        text-align: left;
+    }
 }
