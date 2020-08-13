@@ -3,12 +3,74 @@
     body {
         background-color: rgb(54, 8, 8);
     }
+
+    div #container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr
+                            1fr
+                            1fr
+                            1fr;
+        grid-template-areas: "header"
+                            "mainTemp"
+                            "secondTemp"
+                            "footer";
+    }
+
+    div h1 {
+        grid-area: "header";
+    }
+
+    div #mainTemp {
+        width: 90%;
+        grid-area: "mainTemp";
+    }
+    
+    div #secondTemp {
+        width: 90%;
+        grid-area: "secondTemp";
+    }
+
+    div #footer {
+        grid-area: "footer";
+    }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
     /* For tables */
     body {
         background-color: rgb(15, 44, 15);
+    }
+
+    div #container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr
+                            1fr
+                            1fr
+                            1fr;
+        grid-template-areas: "header"
+                            "mainTemp"
+                            "secondTemp"
+                            "footer";
+    }
+
+    div h1 {
+        grid-area: "header";
+    }
+
+    div #mainTemp {
+        width: 90%;
+        grid-area: "mainTemp";
+    }
+    
+    div #secondTemp {
+        width: 90%;
+        grid-area: "secondTemp";
+    }
+
+    div #footer {
+        grid-area: "footer";
     }
 }
 
@@ -23,20 +85,36 @@ body {
     color: blanchedalmond;
 }
 
-div #mainTemp {
-    width: 40%;
-    float: left;
-}
-
-div #secondTemp {
-    width: 40%;
-    float: left;
+div #container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr
+                        1fr
+                        1fr;
+    grid-template-areas: "header header"
+                        "mainTemp secondTemp"
+                        "footer";
 }
 
 div h1 {
     font-size: 24px;
     font-family: cursive;
     text-align: center;
+    grid-area: "header";
+}
+
+div #mainTemp {
+    width: 40%;
+    grid-area: "mainTemp";
+}
+
+div #secondTemp {
+    width: 40%;
+    grid-area: "secondTemp";
+}
+
+div #footer {
+    grid-area: "footer";
 }
 
 div p {
