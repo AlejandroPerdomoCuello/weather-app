@@ -4,14 +4,11 @@ Information on getting the API to work
 1- This is my API, must be a const
     50b9caeb9f022d5e06aded241bfda347
 
-
 2- This is the website to get the information for current weather in Metric (celsius)
     api.openweathermap.org/data/2.5/weather?q={city name}&units=metric&appid={your api key}
 
-
 3- This is the link to get the information of the last 5 days in Metric (celsius)
     api.openweathermap.org/data/2.5/forecast?q={city name}&units=metric&appid={your api key}
-
 
 */
 
@@ -41,13 +38,10 @@ document.getElementById("mainBtn")
 
         // Here we construct the weblink with the proper name
         let urlNow = weatherNow1 + city + weatherNow2;
-        let url5 = weather51 + city + weather52;
 
         // this is new, so I dont know what I am doing
 
         console.log(fetch(urlNow));
-
-
         
         fetch(urlNow)
             .then((response) => {
@@ -70,7 +64,43 @@ document.getElementById("mainBtn")
                 // Do something for an error here
             });
         
+    });
 
+// Function for the Button2 press that gets the City name from the user
+document.getElementById("btn2")
+    .addEventListener("click", function getCityName2() {
+        let city2 = document.getElementById("cityName2").value;
+        // ocument.getElementById("secondOutput").innerHTML = city2;
+
+        // Here we construct the weblink with the proper name
+
+        let url2 = weatherNow1 + city2 + weatherNow2;
+
+        // this is new, so I dont know what I am doing
+
+        console.log(fetch(url2));
+        
+        fetch(url2)
+            .then((res) => {
+                if (res.ok) {
+                    console.log("Success, Again")
+                } else {
+                    console.log("Error, Again")
+                }
+                
+                return res.json();
+            })
+            .then((data2) => {
+                // Work with JSON data here
+                console.log(data2);
+                console.log(data2.main.temp,);
+                let number2 = data2.main.temp + "°C";
+                document.getElementById("secondOutput").innerHTML = number2;
+            })
+            .catch((err) => {
+                // Do something for an error here
+            });
+        
     });
 
 
@@ -80,5 +110,6 @@ input.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
         event.preventDefault();
         document.getElementById("mainBtn").click();
+        document.getElementById("btn2").click();
     }
 });
