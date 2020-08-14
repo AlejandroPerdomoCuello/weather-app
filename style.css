@@ -15,6 +15,12 @@
         clear: left;
     }
 
+    footer {
+        width: 90%;
+        float: left;
+        clear: left;
+    }
+
 }
 
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
@@ -28,6 +34,12 @@
     }
 
     #secondTemp {
+        width: 90%;
+        float: left;
+        clear: left;
+    }
+
+    footer {
         width: 90%;
         float: left;
         clear: left;
@@ -54,6 +66,10 @@
 body {
     background-color: black;
     color: white;
+}
+
+#container {
+    padding: 50px;
 }
 
 h1 {
