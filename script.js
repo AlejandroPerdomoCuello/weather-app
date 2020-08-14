@@ -13,7 +13,7 @@ Information on getting the API to work
 */
 
 // weather for now with the API already included, make sure that the api starts with http://
-const weatherNow = "http://api.openweathermap.org/data/2.5/weather?q={city name}&units=metric&appid=50b9caeb9f022d5e06aded241bfda347";
+const weatherNow = "https://api.openweathermap.org/data/2.5/weather?q={city name}&units=metric&appid=50b9caeb9f022d5e06aded241bfda347";
 
 // Now to break the weblink to add the city name
 
@@ -38,6 +38,7 @@ document.getElementById("mainBtn")
 
         // Here we construct the weblink with the proper name
         let urlNow = weatherNow1 + city + weatherNow2;
+        console.log(urlNow);
 
         // this is new, so I dont know what I am doing
 
