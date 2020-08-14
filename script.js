@@ -103,13 +103,21 @@ document.getElementById("btn2")
         
     });
 
-/* Somehow this doesnt work on the weblink
-// Function for the Enter  Key
+
+// Function for the Enter  Key for the cityName1 input
 let input = document.getElementById("cityName1");
 input.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
         event.preventDefault();
         document.getElementById("mainBtn").click();
+    }
+});
+
+// Function for the Enter  Key for the cityName2 input
+let input2 = document.getElementById("cityName2");
+input2.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
         document.getElementById("btn2").click();
     }
-});*/
+});
