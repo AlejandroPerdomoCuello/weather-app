@@ -146,11 +146,13 @@ function getFutureTemp() {
             })
             .then((data5) => {
                 // Work with JSON data here
-                console.log(data5);
-                console.log(data5.list[1].dt_txt,);
+                // console.log(data5);
+                // console.log(data5.list[1].dt_txt,);
                 let firstDate5 = data5.list[1].dt_txt;
                 let firstDateTemp5 = data5.list[1].main.temp;
-                document.getElementById("output5").innerHTML = "The date is " + firstDate5 + " and the temperature is " + firstDateTemp5 + "°C.";
+                let firstDateCity5 = data5.city.name;
+                let firstDateCountry5 = data5.city.country;
+                document.getElementById("output5").innerHTML = "The weather for " + firstDateCity5 + "," + firstDateCountry5 + "are as follow:" <br> "The date and hour are " + firstDate5 + " and the temperature is " + firstDateTemp5 + "°C.";
             })
             .catch((err) => {
                 // Do something for an error here
