@@ -17,7 +17,7 @@ const weatherNow = "http://api.openweathermap.org/data/2.5/weather?q={city name}
 
 // Now to break the weblink to add the city name
 
-const weatherNow1 = "http://api.openweathermap.org/data/2.5/weather?q=";
+const weatherNow1 = "https://api.openweathermap.org/data/2.5/weather?q=";
 
 const weatherNow2 = "&units=metric&appid=50b9caeb9f022d5e06aded241bfda347";
 
