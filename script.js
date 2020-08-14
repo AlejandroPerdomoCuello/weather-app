@@ -26,7 +26,7 @@ const weather5 = "api.openweathermap.org/data/2.5/forecast?q={city name}&units=m
 
 // now to break up the weblink to add the city name
 
-const weather51 = "http://api.openweathermap.org/data/2.5/forecast?q=";
+const weather51 = "https://api.openweathermap.org/data/2.5/forecast?q=";
 
 const weather52 = "&units=metric&appid=50b9caeb9f022d5e06aded241bfda347";
 
@@ -34,11 +34,10 @@ const weather52 = "&units=metric&appid=50b9caeb9f022d5e06aded241bfda347";
 document.getElementById("mainBtn")
     .addEventListener("click", function getCityName() {
         let city = document.getElementById("cityName1").value;
-        // ocument.getElementById("mainOutput").innerHTML = city;
 
         // Here we construct the weblink with the proper name
         let urlNow = weatherNow1 + city + weatherNow2;
-        console.log(urlNow);
+        // console.log(urlNow);
 
         // this is new, so I dont know what I am doing
 
@@ -56,22 +55,22 @@ document.getElementById("mainBtn")
             })
             .then((data) => {
                 // Work with JSON data here
-                console.log(data);
-                console.log(data.main.temp,);
+                // console.log(data);
+                // console.log(data.main.temp,);
                 let numberNow = data.main.temp + "°C";
                 document.getElementById("mainOutput").innerHTML = numberNow;
             })
             .catch((err) => {
                 // Do something for an error here
+                console.log("There was an Error getting the Main Data");
             });
-        
+        getFutureTemp();
     });
 
 // Function for the Button2 press that gets the City name from the user
 document.getElementById("btn2")
     .addEventListener("click", function getCityName2() {
         let city2 = document.getElementById("cityName2").value;
-        // ocument.getElementById("secondOutput").innerHTML = city2;
 
         // Here we construct the weblink with the proper name
 
@@ -80,7 +79,7 @@ document.getElementById("btn2")
         // this is new, so I dont know what I am doing
 
         console.log(fetch(url2));
-        
+
         fetch(url2)
             .then((res) => {
                 if (res.ok) {
@@ -93,13 +92,13 @@ document.getElementById("btn2")
             })
             .then((data2) => {
                 // Work with JSON data here
-                console.log(data2);
-                console.log(data2.main.temp,);
+                // console.log(data2.main.temp,);
                 let number2 = data2.main.temp + "°C";
                 document.getElementById("secondOutput").innerHTML = number2;
             })
             .catch((err) => {
                 // Do something for an error here
+                console.log("There was an Error getting the second Data");
             });
         
     });
@@ -122,3 +121,40 @@ input2.addEventListener("keyup", function (event) {
         document.getElementById("btn2").click();
     }
 });
+
+// Making the function to get the Temp of the next 5 days
+function getFutureTemp() {
+        let city5 = document.getElementById("cityName1").value;
+
+        // Here we construct the weblink with the proper name
+        let url5 = weather51 + city5 + weather52;
+        console.log(url5);
+
+        // this is new, so I dont know what I am doing
+
+        console.log(fetch(url5));
+        
+        fetch(url5)
+            .then((response) => {
+                if (response.ok) {
+                    console.log("Success")
+                } else {
+                    console.log("Error")
+                }
+                
+                return response.json();
+            })
+            .then((data5) => {
+                // Work with JSON data here
+                console.log(data5);
+                console.log(data5.list[1].dt_txt,);
+                let firstDate5 = data5.list[1].dt_txt;
+                let firstDateTemp5 = data5.list[1].main.temp;
+                document.getElementById("output5").innerHTML = "The date is " + firstDate5 + " and the temperature is " + firstDateTemp5 + "°C.";
+            })
+            .catch((err) => {
+                // Do something for an error here
+                console.log("There was an Error getting the 5 days ahead Data")
+            });
+        
+    };
