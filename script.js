@@ -103,7 +103,7 @@ document.getElementById("btn2")
         
     });
 
-
+/* Somehow this doesnt work on the weblink
 // Function for the Enter  Key
 let input = document.getElementById("cityName1");
 input.addEventListener("keyup", function (event) {
@@ -112,4 +112,4 @@ input.addEventListener("keyup", function (event) {
         document.getElementById("mainBtn").click();
         document.getElementById("btn2").click();
     }
-});
+});*/
